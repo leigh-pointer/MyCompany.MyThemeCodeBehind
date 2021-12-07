@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RazorLangVersion>3.0</RazorLangVersion>
+    <Version>1.0.0</Version>
+    <Authors>MyCompany</Authors>
+    <Company>MyCompany</Company>
+    <Description>[Description]</Description>
+    <Product>MyCompany.MyThemeCodeBehind</Product>
+    <Copyright>MyCompany</Copyright>
+    <AssemblyName>MyCompany.MyThemeCodeBehind.Client.Oqtane</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Themes\obj\**" />
+    <Content Remove="Themes\obj\**" />
+    <EmbeddedResource Remove="Themes\obj\**" />
+    <None Remove="Themes\obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Containers\Container.razor" />
+    <Content Remove="Themes\Theme.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.0" />
+    <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Oqtane.Client" Version="3.0.0" />
+    <PackageReference Include="Oqtane.Shared" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Oqtane.Shared">
+      <HintPath>..\..\oqtane.framework\Oqtane.Shared\bin\Debug\net6.0\ref\Oqtane.Shared.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <!-- there may be other elements here -->
+    <BlazorWebAssemblyEnableLinking>false</BlazorWebAssemblyEnableLinking>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>
